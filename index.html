@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather+Sans:ital@1&family=Poppins&family=Work+Sans&display=swap" rel="stylesheet">
+<script src="weather.js">
+
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="weatherbox">
+            <div class="search">
+                <form method="get">
+                    <input type="text" placeholder="Enter City Name" id="searchBox" name="city">
+                    <button class="searchbtn">
+                        <img src="/search.png" class="searchimg">
+                    </button>
+                </form>
+            </div>
+            <div class="location">
+                <img src="/drizzle.png" class="forecast">
+                <h1 id="temperature"></h1>
+                <h2 id="cityName"></h2>
+            </div>
+            <div id="logistics">
+                <div class="col">
+                    <div>
+                        <img src="/humidity.png" class="windspeed">
+                    </div>
+                    <div class="humidity">
+                        <h2 class="first"></h2>
+                        <h2>Humidity</h2>
+                    </div>
+                </div>
+                <div class="col2">
+                    <div>
+                        <img src="/wind.png" class="windspeed">
+                    </div>
+                    <div class="wind">
+                        <h2 id="speed"></h2>
+                        <h2>Windspeed</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
