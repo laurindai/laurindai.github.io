@@ -4,7 +4,7 @@ const urlParams = new URLSearchParams(queryString);
 const city = urlParams.get('city')
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}`;
 
-async function checkWeather(){
+    async function checkWeather(){
     const response = await fetch(apiUrl + `&appid=${apiKey}`);
     const data = await response.json();
     document.getElementById(`speed`).textContent = Math.round(data.wind.speed) + ` km/h`
@@ -31,8 +31,7 @@ async function checkWeather(){
     } else if(data.weather[0].main == "Snow") {
         document.querySelector(`.forecast`).src = "snow.png"
     }
-    console.log(data);
-    console.log(windspeed)
+    urlparams.has("city") ? urlparams.get("city) : "New York"
 }
 
 checkWeather();
