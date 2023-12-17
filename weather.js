@@ -1,10 +1,11 @@
 const apiKey = "12cd233ef651716178e91c37c5da7ea2";
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const city = urlParams.get('city')
+const city = urlParams.get("city") ?? "New York";
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}`;
 
-    async function checkWeather(){
+
+async function checkWeather(){
     const response = await fetch(apiUrl + `&appid=${apiKey}`);
     const data = await response.json();
     document.getElementById(`speed`).textContent = Math.round(data.wind.speed) + ` km/h`
@@ -31,7 +32,6 @@ const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=$
     } else if(data.weather[0].main == "Snow") {
         document.querySelector(`.forecast`).src = "snow.png"
     }
-    urlparams.has("city") ? urlparams.get("city) : "New York"
 }
 
 checkWeather();
